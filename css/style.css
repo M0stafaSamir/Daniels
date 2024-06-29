@@ -1,0 +1,591 @@
+/* global  */
+body {
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --mainColor: #343434;
+  --secondColor: #f7f7f7;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--mainColor);
+  font-weight: 900;
+  font-size: 40px;
+}
+h5 {
+  font-weight: 800;
+  font-size: 30px;
+}
+p {
+  color: #748182;
+  font-size: 15px;
+}
+/* start of navbar */
+nav {
+  z-index: 999;
+  transition: 0.4s;
+}
+.colordNav {
+  background-color: white;
+  box-shadow: 0px 0px 0px rgb(196, 192, 192);
+}
+.test {
+  position: relative;
+  transition: 0.5s;
+  color: white;
+}
+#brand {
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.test::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2.5px;
+  background-color: black;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+.tst::after {
+  background-color: white;
+}
+nav .nav-link.active.test::after {
+  width: 100%;
+}
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+.navbar-nav-scroll {
+  max-height: none;
+}
+@media (max-width: 991.9px) {
+  .navbar .container {
+    padding: 0%;
+  }
+  .navbar-nav-scroll {
+    background-color: white;
+  }
+  nav .nav-link.active,
+  nav .nav-link {
+    color: black !important;
+    border-bottom: none;
+    padding-top: 4% !important;
+  }
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+/* end of navbar */
+
+/* start of home */
+
+#home {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(../imgs/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#home h5 {
+  font-size: 50px;
+  font-weight: 800;
+}
+#home p {
+  font-size: 60px;
+  font-weight: 200;
+}
+
+@media (max-width: 767px) {
+  #home p {
+    font-size: 40px;
+  }
+}
+@media (max-width: 576px) {
+  #home p {
+    font-size: 30px;
+  }
+}
+
+.homeIcons {
+  color: rgba(0, 0, 0, 0.3);
+}
+.homeIcons span {
+  width: 35px;
+}
+
+.typing::after {
+  content: "";
+  animation-name: typing;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+/* end of home */
+
+/* start of about section */
+#aboutMe .heroImg::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  z-index: -1;
+
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  bottom: -30px;
+  left: -30px;
+}
+
+#aboutMe p:first-of-type {
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+#aboutMe p:last-of-type {
+  color: #748182;
+}
+
+.progress {
+  height: 25px;
+  background: #f7f7f7;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+.mainBtn,
+.contactBtn {
+  font-size: 13px;
+}
+.mainBtn:hover {
+  background-color: transparent !important;
+  color: black !important;
+}
+.contactBtn:hover {
+  background-color: black;
+  color: white;
+}
+/* end of about section */
+/* start of services */
+#services {
+  background-color: var(--secondColor);
+}
+#services h1 {
+  font-weight: 900;
+}
+
+.icon {
+  background-color: var(--secondColor);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+}
+
+.service:hover .icon,
+.icon:hover {
+  background-color: black;
+  color: white;
+}
+
+.secTitle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  background-image: url(../imgs/dots.png);
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* portfolio */
+#portfolio {
+  min-height: 100vh;
+}
+
+.itemHover {
+  width: 96%;
+  height: 96%;
+  top: 2%;
+  left: 2%;
+
+  p {
+    letter-spacing: 2px;
+    font-size: 13px;
+    transform: translateY(-15px);
+    transition: 0.5s;
+  }
+
+  svg {
+    background-color: black;
+    color: white;
+    transform: translateY(10px);
+    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid black;
+  }
+  svg:hover {
+    color: black;
+    background-color: white;
+  }
+}
+
+.itemImg:hover .itemHover p,
+.itemImg:hover .itemHover svg {
+  transform: translate(0);
+}
+
+.itemHover {
+  transform: translateY(3%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.itemImg:hover .itemHover {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+.oink {
+  position: absolute;
+  width: 0%;
+  height: 2.5px;
+  background-color: black;
+  left: 14px;
+  bottom: 0;
+  transition: 0.5s;
+}
+.nav-tabs .nav-link:focus .oink {
+  width: 55%;
+  border: transparent;
+}
+
+.nav-tabs .nav-link.active .oink {
+  width: 55%;
+}
+
+/* start of testimonials */
+#testimonials {
+  min-height: 80vh;
+  background-color: var(--secondColor);
+}
+
+.client-feedback img {
+  width: 90px;
+}
+.client-feedback p:first-of-type {
+  word-spacing: 2px;
+  font-size: 15px;
+}
+
+#carouselExampleIndicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+}
+#carouselExampleIndicators button:hover {
+  background-color: #869791;
+  opacity: 1;
+}
+.fs-12p {
+  font-size: 12px;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #869791 !important;
+}
+/* end of testimonials */
+
+/* start of  stats */
+#stats {
+  min-height: 45vh;
+}
+/* end of  stats */
+
+/* start of our team */
+#ourTeam {
+  background-color: var(--secondColor);
+}
+
+.member-data {
+  background-color: rgba(52, 52, 52, 0.8);
+}
+.member-data h4 {
+  font-size: 25px;
+}
+.member-data h5 {
+  font-size: 20px;
+}
+
+.member .memberImg img {
+  transition: 0.5s;
+}
+.member .memberImg:hover img {
+  transform: scale(1.2);
+}
+
+.layerHover {
+  width: 96%;
+  height: 96%;
+  background-color: rgba(255, 255, 255, 0.381);
+  left: 2%;
+  bottom: 2%;
+  transform: scale(0.5) rotateY(180deg);
+  transition: 0.5s;
+  opacity: 0;
+
+  svg {
+    background-color: black;
+    color: white;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 1px solid black;
+  }
+  svg:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+.member:hover .layerHover {
+  transform: scale(1) rotateY(0);
+  opacity: 0.95;
+}
+/* end of our team */
+
+/* contact us */
+input[type="text"],
+input[type="email"],
+.txt {
+  background-color: #f4f4f4;
+  border: none;
+  font-size: 14px;
+}
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: #f4f4f4;
+  border: none;
+
+  box-shadow: none;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* contact us */
+
+/* footer */
+footer {
+  background: #1c1c1c;
+  min-height: 10vh;
+}
+footer p {
+  font-size: 13px;
+  word-spacing: 2px;
+  color: #748182;
+}
+/* footer */
+
+/*Animation*/
+
+@keyframes typing {
+  0% {
+    content: "L|";
+  }
+  1.49% {
+    content: "La|";
+  }
+  2.98% {
+    content: "Lar|";
+  }
+  4.47% {
+    content: "Larr|";
+  }
+  5.96% {
+    content: "Larry|";
+  }
+  7.45% {
+    content: "Larry D|";
+  }
+  8.94% {
+    content: "Larry Da|";
+  }
+  10.43% {
+    content: "Larry Dan|";
+  }
+  11.92% {
+    content: "Larry Dani|";
+  }
+  13.41% {
+    content: "Larry Danie|";
+  }
+  14.9% {
+    content: "Larry Daniel|";
+  }
+  16.39% {
+    content: "Larry Daniels|";
+  }
+  17.88% {
+    content: "Larry Daniel|";
+  }
+  19.37% {
+    content: "Larry Danie|";
+  }
+  20.86% {
+    content: "Larry Dani|";
+  }
+  22.35% {
+    content: "Larry Dan|";
+  }
+  23.84% {
+    content: "Larry Da|";
+  }
+  25.33% {
+    content: "Larry D|";
+  }
+  26.82% {
+    content: "Larry|";
+  }
+  28.31% {
+    content: "Larr|";
+  }
+  29.8% {
+    content: "Lar|";
+  }
+  31.29% {
+    content: "La|";
+  }
+  32.78% {
+    content: "L|";
+  }
+  34.27% {
+    content: "|";
+  }
+  35.76% {
+    content: "D|";
+  }
+  37.25% {
+    content: "De|";
+  }
+  38.74% {
+    content: "Dev|";
+  }
+  40.23% {
+    content: "Deve|";
+  }
+  41.72% {
+    content: "Devel|";
+  }
+  43.21% {
+    content: "Develo|";
+  }
+  44.7% {
+    content: "Develop|";
+  }
+  46.19% {
+    content: "Develope|";
+  }
+  47.68% {
+    content: "Developer|";
+  }
+  49.17% {
+    content: "Develope|";
+  }
+  50.66% {
+    content: "Develop|";
+  }
+  52.15% {
+    content: "Develo|";
+  }
+  53.64% {
+    content: "Devel|";
+  }
+  55.13% {
+    content: "Deve|";
+  }
+  56.62% {
+    content: "Dev|";
+  }
+  58.11% {
+    content: "De|";
+  }
+  59.6% {
+    content: "D|";
+  }
+  61.09% {
+    content: "|";
+  }
+  62.58% {
+    content: "D|";
+  }
+  64.07% {
+    content: "De|";
+  }
+  65.56% {
+    content: "Des|";
+  }
+  67.05% {
+    content: "Desi|";
+  }
+  68.54% {
+    content: "Desig|";
+  }
+  70.03% {
+    content: "Design|";
+  }
+  71.52% {
+    content: "Designe|";
+  }
+  73.01% {
+    content: "Designer|";
+  }
+  74.5% {
+    content: "Designe|";
+  }
+  75.99% {
+    content: "Design|";
+  }
+  77.48% {
+    content: "Desig|";
+  }
+  78.97% {
+    content: "Desi|";
+  }
+  80.46% {
+    content: "Des|";
+  }
+  81.95% {
+    content: "De|";
+  }
+  83.44% {
+    content: "D|";
+  }
+  84.93% {
+    content: "|";
+  }
+  100% {
+    content: "|";
+  }
+}
